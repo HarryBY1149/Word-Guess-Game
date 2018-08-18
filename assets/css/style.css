@@ -1,0 +1,61 @@
+html {
+    min-height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+body {
+    background-image:url("../images/Dog-Island.jpg");
+    background-size: 100%;
+    z-index: -1;
+}
+
+header {
+    background: #a35400;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    padding: 13px 0 13px 0;
+}
+
+.game-container {
+    position: absolute;
+    left: 0;
+    top: 10%;
+    bottom: 0;
+    float: left;
+    height: cover;
+    width: 50%;
+    justify-content: center;
+    text-align: center;
+    background-color: #ffffff;
+}
+.game-content {
+    margin: 25% 0;
+}
+
+#happy-dog {
+    display: block; 
+    float: right; 
+    margin: 10% 5%;    
+} 
+
+.game-content p {
+ font-size: 18px;
+ letter-spacing: 3px;
+ padding: 10px 0;  
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    height: 34px;
+    width: 100%;
+    text-align: center;
+    z-index: 4;
+    background-color: #050505;
+    color: #ffffff;
+}

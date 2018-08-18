@@ -1,35 +1,54 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Guess the Breed!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    
+
 </head>
+
 <body>
     <header>
         <banner>
             <h1>Hangman! The Kennel Club Edition.</h1>
-        </banner> 
+        </banner>
     </header>
 
-    <image src="#" alt="A sweet hangman image"></image>
-    <div class="game-content">
-        <p class="declaration">Press any letter to guess.</p>
-        <p class="win-declaration">Wins:<div id="display-wins"></div> </p>
-        <p class="word-declaration">Current Breed</p>
-        <br>
-        <p><span id="guess-field"></span></p>
-        <br>
-        <p class="guess-declaration">Number of Guesses Remaining</p>
-        <p><span id="guesses-remaining"></span></p>
-        <br>
-        <p class="letters-declaration">Letters guessed</p>
-        <p><span id="letters-guessed" class="declaration"></span></p>
+    <img src="assets/images/Jumping-Beagle.jpg" alt="Happy Doggy!" id="happy-dog" style="opacity:0;">
+    <div class="game-container">
+           
+        <div class="game-content">
+            
+            <p class="declaration">Press any letter to guess.</p>
+            <p class="win-declaration">Wins:
+                <div id="display-wins"></div>
+            </p>
+            <p class="word-declaration">Guess the Breed! Hint: no spaces</p>
+            <br>
+            <p>
+                <span id="guess-field"></span>
+            </p>
+            <br>
+            <p class="guess-declaration">Number of Guesses Remaining</p>
+            <p>
+                <span id="guesses-remaining"></span>
+            </p>
+            <br>
+            <p class="letters-declaration">Letters guessed</p>
+            <p>
+                <span id="letters-guessed" class="declaration"></span>
+            </p>
+        </div>
     </div>
+    <footer>
+        <p>Background image courtesy of Oregonpark.org</p>
+        <p>Copyright &copy;</p>
+    </footer>
     <script src="assets/javascript/game.js"></script>
 </body>
+
 </html>
