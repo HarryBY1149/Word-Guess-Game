@@ -17,7 +17,7 @@ function newGame() {
     var guessField = document.getElementById("guess-field");
     var guessesRemaining = document.getElementById("guesses-remaining");
     var lettersGuessed = document.getElementById("letters-guessed");
-    //var happyDog = document.getElementById("happy-dog");
+    var happyDog = document.getElementById("happy-dog");
     function reset() {
         answerArray = [];
         currentWord = "";
@@ -27,6 +27,7 @@ function newGame() {
         displayWins.textContent = wins;
         lettersGuessed.textContent = lettersGuessedArray;
         guessesRemaining.textContent = guesses;
+        happyDog.setAttribute("Style", "opacity:0;");
         function generateVariables() {
             currentWord = breeds[Math.floor(Math.random() * breeds.length)];
             for (i = 0; i < currentWord.length; i++) {
@@ -41,6 +42,7 @@ function newGame() {
             };
         }
         generateVariables();
+
     }
 
     reset()
@@ -56,14 +58,19 @@ function newGame() {
                     guessField.textContent = answerArray.join("");
                     matches++;
                     if (answerArray.indexOf('_') === -1) {
-                        alert("You Win!");
+                        happyDog.setAttribute("Style", "Opacity:1;");
+                        guessField.textContent = answerArray.join("");
                         wins++;
-                        //happyDog.setAttribute("Style", "Opacity:1;");
-                        reset();
-                    };
-                };
+                        setTimeout(function(){
+                           { var playAgain = confirm("You win! Play again?");
+                                if (playAgain){
+                             reset()}}}, 600);
 
-            })
+                        };
+
+                    };
+                });
+            
             if (matches === 0) {
                 guesses--;
                 guessesRemaining.textContent = guesses;
