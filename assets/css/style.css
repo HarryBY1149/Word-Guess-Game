@@ -40,7 +40,8 @@ h1 {
 #happy-dog {
     display: block; 
     float: right; 
-    margin: 10% 5%;    
+    margin: 10% 5%;
+    z-index: 3;    
 } 
 
 .game-content p {
@@ -58,4 +59,14 @@ footer {
     z-index: 4;
     background-color: #050505;
     color: #ffffff;
+}
+
+@media screen and (max-width: 640px) {
+    .game-container {
+        width:100%;
+        top: 25%;
+    }
+    #happy-dog{
+        display: hidden;
+    }
 }
