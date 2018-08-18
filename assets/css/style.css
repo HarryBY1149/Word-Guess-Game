@@ -6,8 +6,10 @@ html {
 
 body {
     background-image:url("../images/Dog-Island.jpg");
-    background-size: 100%;
+    background-size: cover;
     z-index: -1;
+    background-repeat: no-repeat;
+    
 }
 
 header {
@@ -61,12 +63,15 @@ footer {
     color: #ffffff;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 786px) {
     .game-container {
         width:100%;
         top: 25%;
     }
     #happy-dog{
-        display: hidden;
+        top: 30%;
+    }
+    body {
+        background-size: 100%;
     }
 }
